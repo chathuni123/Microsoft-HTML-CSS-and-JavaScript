@@ -1,3 +1,10 @@
 document.getElementById('submitButton').addEventListener('click', function() {
   alert('Form submitted!');
 });
+const form = document.getElementById('contactForm');
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevents default form submission
+  if (!form.name.value) {
+    alert('Please enter your name!');
+  }
+});
