@@ -8,3 +8,14 @@ form.addEventListener('submit', function(event) {
     alert('Please enter your name!');
   }
 });
+
+// Original
+let message = '';
+if (name) {
+  message = 'Hello, ' + name + '!';
+} else {
+  message = 'Hello, Guest!';
+}
+
+// Refactored
+const message = name ? `Hello, ${name}!` : 'Hello, Guest!';
